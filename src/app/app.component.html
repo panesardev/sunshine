@@ -1,0 +1,32 @@
+<section class="container">
+	<header>
+		<h1><span>SunShine</span></h1>
+	</header>
+	<div class="input-div">
+		<i class="fas fa-search"></i>&nbsp;
+		<input type="text" [(ngModel)]="location" name="location" (keyup)="displayWeatherData();" autocomplete="off" placeholder="Enter location here">
+	</div>
+	<div *ngIf="locationIsEntered; else locationNotEntered">
+		<div *ngIf="locationIsCorrect; else locationNotCorrect">
+			<div class="sub-container animate__animated animate__fadeInUp">
+				<p style="margin-top: 10px;"><span id="current-temp">{{ currentTemp }}°C</span></p>
+				<p><span id="feels-like">{{ tempMin }}°/{{ tempMax }}° Feels like {{ feelsLike }}°</span></p>
+				<p><span id="conditions">{{ weatherData.weather[0].main }} - {{ weatherData.weather[0].description }}</span></p>
+				<p><span>Humidity: {{ weatherData.main.humidity }}%</span> - Wind Speed: {{ windkmps }} km/h</p>
+			</div>
+			<div class="sub-container animate__animated animate__fadeInUp">
+				<p style="text-align: left;"><span id="city-info">{{ location }}, {{ country }}</span></p>
+			</div>
+		</div>
+	</div>
+	<ng-template #locationNotEntered>
+		<div class="info" style="color: #464d5a;">
+			<p>Enter location to view weather info.</p>
+		</div>
+	</ng-template>
+	<ng-template #locationNotCorrect>
+		<div class="info" style="color: #e44343;">
+			<p>Please enter a valid location</p>
+		</div>
+	</ng-template>
+</section>

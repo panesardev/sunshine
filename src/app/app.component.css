@@ -1,0 +1,94 @@
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+@media (min-width: 768px) {
+	.container {
+	    width: 750px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+	    width: 970px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+	    width: 1170px;
+	}
+}
+header h1 {
+	color: #4381f5;
+	margin-top: 25px;
+	font-size: 2.5rem;
+}
+header h1 span {
+	padding: 5px 20px;
+	border-bottom: .2rem solid #4381f5;
+	border-radius: 5px;	
+}
+.input-div {
+	border: .1rem solid rgb(241, 244, 247);
+	background-color: rgb(241, 244, 247);
+	color: rgb(91, 96, 112);
+	padding: 5px 15px;
+	border-radius: 5px;
+	display: inline;
+	transition: .25s;
+}
+.invalid-field {
+	border: .1rem solid rgb(243, 113, 113) !important;
+}
+i {
+	color: inherit;
+}
+input[type="text"] {
+	outline: none;
+	border: none;
+	background-color: inherit;
+	font-size: 1.1rem;
+	color: inherit;
+	width: 280px;
+}
+.sub-container {
+	margin: 30px 10px;
+	background-color: rgb(251, 252, 253);
+	border-radius: 5px;
+	max-width: 600px;
+	padding: 10px 30px;
+	box-shadow: 0 0 10px rgb(210, 215, 221);
+	border-left: .3rem solid #4381f5;
+	border-right: .3rem solid #4381f5;
+}
+#current-temp {
+	font-size: 4rem;
+	color: #4381f5;
+	margin: 0;	
+}
+#feels-like {
+	background-color: #4381f523;
+	color: #4381f5;
+	padding: 5px 20px;
+	border-radius: 5px;
+}
+#conditions {
+	background-color: #3cba5323;
+	color: #3cba54;
+	padding: 5px 20px;
+	border-radius: 5px;
+}
+#city-info {
+	background-color: #4381f523;
+	color: #4381f5;
+	padding: 5px 20px;
+	border-radius: 5px;
+}
+.info p {
+	margin-top: 30px;
+	font-size: 1.1rem;
+}
+
+.animate__animated.animate__fadeInUp {
+	--animate-duration: .3s;
+  }
